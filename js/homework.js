@@ -29,10 +29,13 @@ class User{
         this.username = username
         this.password = password
     }
-    incorrectPass(password, newPass){
-        if (newPass !== password)
-        console.log('Passwords did not match')
-};
+    changePassword(oldPassword, newPassword){
+        if (oldPassword !== this.password){
+            console.log('Passwords been updated fool')
+        }   else {
+            console.log('Your password incorrect')
+    }
+}
 
 
 
@@ -51,7 +54,7 @@ function squareNegatives(arr) {
     newArr = [];
     for (var i = 0, len = arr.length; i < len; i++) {
         if (arr[i] < 0)
-        newArr.push(arr[i] **2);
+        newArr.push(arr[i] * arr[i]);
     }
     return newArr;     
 }
